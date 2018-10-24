@@ -7,6 +7,7 @@ import { AboutComponent } from './about/about.component';
 import { ProductsComponent } from './products/products.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { HomeComponent } from './home/home.component';
+import { AuthComponent } from './auth/auth.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     AboutComponent,
     ProductsComponent,
-    HomeComponent
+    HomeComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
