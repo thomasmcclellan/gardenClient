@@ -1,5 +1,7 @@
 export class Product {
-    name: string;
-    price: number;
-    isInStock: boolean;
+    id: number;
+    product_name: string;
+    product_description: string;
+    product_price:number;
+    product_image:string;
 }

@@ -4,12 +4,15 @@
 
   <tr>
     <th>Name:</th>
+    <th>Description:</th>
     <th>Price:</th>
-    <th>In Stock:</th>
+    <th>Image:</th>
   </tr>
   <tr *ngFor="let product of products">
-    <td>{{product.name}}</td>
-    <td>{{product.price}}</td>
-    <td>{{product.isInStock}}</td>
+    <td>{{product.id}}</td>
+    <td>{{product.product_name}}</td>
+    <td>{{product.product_description}}</td>
+    <td>{{product.product_price}}</td>
+    <td>{{product.product_image}}</td>
   </tr>
 </table>
