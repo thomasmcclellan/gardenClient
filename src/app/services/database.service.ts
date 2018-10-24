@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { Observable } from 'rxjs/Observable';
 import { Product } from '../models/products';
 import { User } from '../models/user';
+// import { catchError, retry } from 'rxjs/operators'
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -26,7 +27,7 @@ export class DatabaseService {
     return this.http.get<Product[]>(this.productUrl)
   }
   
-  login (): Observable<User[]>{
-    return this.http.post<User[]>(this.userUrl, httpOptions)
+  login (user: User): Observable<User[]>{
+    return this.http.post<User[]>(this.userUrl, user, httpOptions)
   }
 }
