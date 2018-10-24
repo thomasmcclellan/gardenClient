@@ -1,3 +1,27 @@
-<p>
-  auth works!
-</p>
+<div class="card">
+  <div class="cardContainer">
+    <h1>Admin Portal</h1>
+    <h3>Login</h3>
+    <form
+      (ngSubmit)="onLogin()"
+      [formGroup]="login"
+    >
+      <input 
+        type="text"
+        placeholder="Username"
+        formControlName="username"
+        name="username"
+      >
+      <input 
+        type="password"
+        placeholder="Password"
+        formControlName="password"
+        name="password"
+      ><br>
+    
+      <button
+        type="submit"
+      >Login</button>
+    </form>
+  </div>
+</div>

@@ -8,6 +8,7 @@ import { ProductsComponent } from './products/products.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { AuthComponent } from './auth/auth.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -16,11 +17,13 @@ import { AuthComponent } from './auth/auth.component';
     AboutComponent,
     ProductsComponent,
     HomeComponent,
-    AuthComponent
+    AuthComponent 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
