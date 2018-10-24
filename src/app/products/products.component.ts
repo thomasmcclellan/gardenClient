@@ -18,7 +18,6 @@ export class ProductsComponent implements OnInit {
 
   findProducts(): void{
     this.dbService.getProducts().subscribe(Product => this.products = Product)
-    console.log(this.products)
   }
 
 }

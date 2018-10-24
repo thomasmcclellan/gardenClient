@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { AuthComponent } from './auth/auth.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DatabaseService } from './services/database.service';
+import { HttpClientModule , HttpClient, HttpHandler} from '@angular/common/http';
 
 
 @NgModule({
@@ -24,9 +25,10 @@ import { DatabaseService } from './services/database.service';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [DatabaseService],
+  providers: [DatabaseService,HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
