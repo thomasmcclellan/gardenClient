@@ -19,6 +19,7 @@ export class DatabaseService {
   private productUrl = `${this.dbUrl}/product`
 
   private userUrl = `${this.dbUrl}/auth/login`
+ 
 
   constructor(private http: HttpClient) {
   }
@@ -27,7 +28,14 @@ export class DatabaseService {
     return this.http.get<Product[]>(this.productUrl)
   }
   
-  login (user: User): Observable<User[]>{
+  login (user:User):
+   Observable<User[]>{
     return this.http.post<User[]>(this.userUrl, user, httpOptions)
+  }
+
+  delete(id)
+  {
+    let deleteUrl=`${this.productUrl}//${id}`
+    return this.http.delete(deleteUrl)
   }
 }

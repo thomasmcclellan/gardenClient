@@ -4,12 +4,12 @@
   <div class="deck">
     <div 
       class="card" 
-      *ngFor="let product of products"
-    >
+      *ngFor="let product of products">
       <div class="cardContainer">
         <h1>{{ product.product_name }}</h1>
         <p>{{ product.product_description }}</p>
         <h4>${{ product.product_price }}.00</h4>
+        <button  (click)= "delete(product.id)" >Delete</button>
       </div>
     </div>
   </div>

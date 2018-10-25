@@ -11,6 +11,7 @@ import { AuthComponent } from './auth/auth.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DatabaseService } from './services/database.service';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { TransactionsComponent } from './transactions/transactions.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     AboutComponent,
     ProductsComponent,
     HomeComponent,
-    AuthComponent 
+    AuthComponent,
+    TransactionsComponent 
   ],
   imports: [
     BrowserModule,

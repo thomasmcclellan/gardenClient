@@ -23,7 +23,8 @@ export class AuthComponent implements OnInit {
 
   onLogin(): void {
     this._user.push(this.login)
-    this.dbService.login(this._user[0].value).subscribe(User => this._user[0].value = User)
-    console.log('made it here',this._user[0].value, User)
+    this.dbService.login(this._user[0].value).subscribe(
+      User => localStorage.setItem('token',User.token)
+      );
   }
 }

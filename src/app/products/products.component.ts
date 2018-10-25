@@ -16,9 +16,18 @@ export class ProductsComponent implements OnInit {
     this.findProducts();
   }
 
-  findProducts(): void{
+  findProducts():void{
     this.dbService.getProducts().subscribe(Product => this.products = Product)
-    console.log(this.products)
+  }
+
+  delete(id){
+    if (localStorage.getItem('token')){
+      this.dbService.delete(id).subscribe(
+        id => this.findProducts()
+        )
+    }else {
+      alert(' You do not have the authority to delete this item ')
+    }
   }
 
 }
