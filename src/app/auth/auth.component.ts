@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms'
 import { DatabaseService } from '../services/database.service';
+import { User } from '../models/user'
 
 @Component({
   selector: 'app-auth',
@@ -9,7 +10,7 @@ import { DatabaseService } from '../services/database.service';
 })
 export class AuthComponent implements OnInit {
   login: FormGroup
-  public _user = []
+  private _user = []
 
   constructor(private fb: FormBuilder, private dbService: DatabaseService) { }
 
@@ -22,6 +23,8 @@ export class AuthComponent implements OnInit {
 
   onLogin(): void {
     this._user.push(this.login)
-    this.dbService.login(this._user[0].value).subscribe(User => this._user[0].value = User)
+    this.dbService.login(this._user[0].value).subscribe(
+      User => localStorage.setItem('token',User.token)
+      );
   }
 }

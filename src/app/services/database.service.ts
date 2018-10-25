@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { Observable } from 'rxjs/Observable';
 import { Product } from '../models/products';
 import { User } from '../models/user';
+// import { catchError, retry } from 'rxjs/operators'
 
 const httpOptions = {
   headers: new HttpHeaders({
