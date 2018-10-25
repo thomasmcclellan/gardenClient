@@ -1,18 +1,16 @@
-<h1>Grass Roots Garden</h1>
-<h2>Products</h2>
-<table border="3">
-
-  <tr>
-    <th>Name:</th>
-    <th>Description:</th>
-    <th>Price:</th>
-    <th>Image:</th>
-  </tr>
-  <tr *ngFor="let product of products">
-    <td>{{product.id}}</td>
-    <td>{{product.product_name}}</td>
-    <td>{{product.product_description}}</td>
-    <td>{{product.product_price}}</td>
-    <td>{{product.product_image}}</td>
-  </tr>
-</table>
+<div class="prods">
+  <h1 class="prodTitles">Grass Roots Garden</h1>
+  <h2 class="prodTitles">Products</h2>
+  <div class="deck">
+    <div 
+      class="card" 
+      *ngFor="let product of products"
+    >
+      <div class="cardContainer">
+        <h1>{{ product.product_name }}</h1>
+        <p>{{ product.product_description }}</p>
+        <h4>${{ product.product_price }}.00</h4>
+      </div>
+    </div>
+  </div>
+</div>
