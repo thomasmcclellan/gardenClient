@@ -1,6 +1,15 @@
+#authVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100vw; 
+  filter: grayscale(75%);
+}
+
 .card {
-  border: 1px solid black;
-  border-radius: 0.4em;
+  /* border: 1px solid black; */
+  /* border-radius: 0.4em; */
+  background: transparent;
   width: 40vw;
   margin: auto;
   text-align: center;
