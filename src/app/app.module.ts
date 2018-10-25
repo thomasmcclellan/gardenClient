@@ -10,7 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { AuthComponent } from './auth/auth.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DatabaseService } from './services/database.service';
-import { HttpClientModule , HttpClient, HttpHandler} from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { TransactionsComponent } from './transactions/transactions.component';
 
 
 @NgModule({
@@ -19,16 +20,17 @@ import { HttpClientModule , HttpClient, HttpHandler} from '@angular/common/http'
     AboutComponent,
     ProductsComponent,
     HomeComponent,
-    AuthComponent 
+    AuthComponent,
+    TransactionsComponent 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule, 
     HttpClientModule
   ],
-  providers: [DatabaseService,HttpClient],
+  providers: [DatabaseService, HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from './products';
-import {DatabaseService} from '../services/database.service'
+import { Product } from '../models/products';
+import { DatabaseService } from '../services/database.service'
 
 @Component({
   selector: 'app-products',
@@ -18,6 +18,10 @@ export class ProductsComponent implements OnInit {
 
   findProducts(): void{
     this.dbService.getProducts().subscribe(Product => this.products = Product)
+  }
+
+  delete(id){
+    this.dbService.delete(id).subscribe(id => alert(`${id} has been deleted`))
   }
 
 }
